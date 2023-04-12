@@ -1,0 +1,106 @@
+{
+   "topics":[
+      {
+         "id":1,
+         "title":"Jobs",
+         "description":"{}",
+         "subTopics":[
+            {
+               "id":1,
+               "title":"Arbetsförmedlingen",
+               "url":"https://arbetsformedlingen.se/other-languages/english-engelska",
+               "urlType":"website",
+               "description":"ASDAUHSDFIJSDKOJFSDGJKOSIDJFIOSDJSODJGOISJDGOJISGDOJSIDGOIJGSJOSDGJO",
+               "imageUrl":"https://arbetsformedlingen.se/images/18.3e623d4f16735f3976e1189/1543311599470/Logga.png"
+            },
+            {
+               "id":2,
+               "title":"Folkuniversitet",
+               "url":"https://www.folkuniversitetet.se/new-in-sweden/work-for-ukrainians/",
+               "urlType":"website",
+               "description":"Support for entering the labour market.",
+               "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+            },
+            
+         ]
+      },
+      {
+         "id":2,
+         "title":"Housing",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      },
+      {
+         "id":3,
+         "title":"Language",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      },
+      {
+         "id":4,
+         "title":"Language",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      },
+      {
+         "id":5,
+         "title":"Language",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      },
+      {
+         "id":6,
+         "title":"Language",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      },
+      {
+         "id":7,
+         "title":"Language",
+         "description":"{}",
+         "subTopics":[
+            
+         ]
+      }
+      
+   ],
+   "communities":[
+      {
+         "id":1,
+         "title":"Facebook",
+         "url":"",
+      },
+      {
+          "id": 2,
+          "title":"Telegram",
+          "url":"",
+      },
+      {
+          "id": 3,
+          "title":"Reddit",
+          "url":"",
+      },
+   ],
+   "emergencyNumbers":[
+      {
+         "id":1,
+         "title":"Emergency ( 112 )",
+         "phoneNumber":"112",
+      },
+      {
+          "id": 2,
+          "title":"Police, not urgent. ( 11414 )",
+          "phoneNumber":"11414",
+      },
+   ]
+}

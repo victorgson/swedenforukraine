@@ -57,18 +57,22 @@ struct ContentView: View {
                         }
                     }
                     Section("Phone numbers") {
-                        LazyVGrid(columns: items) {
                             ForEach(dataManager.emergencyNumbers) { emergencyNumber in
                                 Button {
                                     UIApplication.shared.open(URL(string: "tel:11414")!)
                                 } label: {
                                     ZStack {
-                                        RoundedRectangle(cornerRadius: 10).frame(width: 180, height: 180).foregroundColor(.white).shadow(radius: 5)
-                                        Text(emergencyNumber.title).font(.title).fontWeight(.bold)
-                                    }
+                                        RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity).foregroundColor(.white).shadow(radius: 5)
+                                        HStack {
+                                            Text(emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
+                                            Spacer()
+                                            Image(systemName: "phone.fill").padding(.trailing, 10)
+                       
+                                        }
+                                      
+                                    }.padding(5)
                                 }
                             }
-                        }
                     }
                 }
             }

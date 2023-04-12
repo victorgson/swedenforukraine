@@ -21,7 +21,30 @@
                "description":"Support for entering the labour market.",
                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
             },
-            
+            {
+               "id":3,
+               "title":"Swedes for Ukraine",
+               "url": "https://swedesforukraine.org/uk/jobs-in-sweden/?doing_wp_cron=1680235272.9538369178771972656250",
+               "urlType":"website",
+               "description":"Sigma Software has created a website with many good resources for Ukrainians in Sweden. This page in particular for Jobs.",
+               "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+            },
+            {
+               "id":4,
+               "title":"Jobbsprånget Ukraine",
+               "url": "https://jobbspranget.se/ukraine-contact/",
+               "urlType":"website",
+               "description":"If you are a refugee from Ukraine, please contact ukraina@jobbspranget.se for further information.",
+               "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+            },
+            {
+               "id":5,
+               "title":"Just Arrived",
+               "url": "https://www.justarrived.se/newly-arrived-ukraine",
+               "urlType":"website",
+               "description":"If you are a refugee from Ukraine, please contact ukraina@jobbspranget.se for further information.",
+               "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+            },
          ]
       },
       {
@@ -29,7 +52,30 @@
          "title":"Housing",
          "description":"{}",
          "subTopics":[
-            
+             {
+                 "id": 1,
+                 "title":"Migrationsverket",
+                 "url": "https://www.migrationsverket.se/English/Private-individuals/Protection-under-the-Temporary-Protection-Directive/Accommodation.html",
+                 "urlType":"website",
+                 "description":"If you are a refugee from Ukraine, please contact ukraina@jobbspranget.se for further information.",
+                 "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+              },
+             {
+                "id": 2,
+                "title":"Swedes for Ukraine",
+                "url": "https://swedesforukraine.org/uk/",
+                "urlType":"website",
+                "description":"If you are a refugee from Ukraine, please contact ukraina@jobbspranget.se for further information.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+             },
+             {
+                 "id": 3,
+                 "title":"Accomodation for Ukrainian Refugees - Facebook Group",
+                 "url": "https://www.facebook.com/groups/682101599891991/",
+                 "urlType":"website",
+                 "description":"If you are a refugee from Ukraine, please contact ukraina@jobbspranget.se for further information.",
+                 "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+              },
          ]
       },
       {
@@ -37,20 +83,82 @@
          "title":"Language",
          "description":"{}",
          "subTopics":[
-            
+             {
+                "id": 1,
+                "title":"Folkuniversitet",
+                "url": "https://www.folkuniversitetet.se/in-english/swedish-courses/swedish-for-asylum-seekers/",
+                "urlType":"website",
+                "description":"Courses on Swedish.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+             },
+             {
+                "id": 2,
+                "title":"ABF Mölndal",
+                "url": "https://www.abf.se/arrangemang/vastra-gotalands-lan/molndal/litteratur-svenska-retorik/svenska-och-arbetsmarknad-i-molndal/",
+                "urlType":"website",
+                "description":"Classes on Swedish and Job coaching.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+             },
+             {
+                "id": 3,
+                "title":"ABF Kungälv",
+                "url": "https://www.abf.se/arrangemang/vastra-gotalands-lan/kungalv/litteratur-svenska-retorik/svenska-och-arbetsmarknad-i-kungalv/",
+                "urlType":"website",
+                "description":"Classes on Swedish and Job coaching.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+             },
+             {
+                "id": 4,
+                "title":"SFI For Ukrainians",
+                "url": "https://www.folkuniversitetet.se/new-in-sweden/sfi-for-ukrainians/",
+                "urlType":"website",
+                "description":"SFI For Ukrainians.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png"
+             },
+             {
+                "id": 5,
+                "title":"Red Cross - Sweden",
+                "url": "https://www.rodakorset.se/en/get-help/practice-swedish2/",
+                "urlType":"website",
+                "description":"SFI For Ukrainians.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png",
+             },
          ]
       },
       {
          "id":4,
-         "title":"Language",
+         "title":"Medical",
          "description":"{}",
          "subTopics":[
-            
+             {
+                "id": 1,
+                "title":"1177",
+                "url": "https://www.1177.se/uk/other-languages/other-languages/",
+                "urlType":"website",
+                "description":"Advice and health information, all links.",
+                "imageUrl": "https://www.1177.se/globalassets/1177/nationell/media/fotografier/om-1177-vardguiden/pressbilder/1177-webbplats04.jpg?saved=2022-06-09+02:07&preset=preset_1500",
+             },
+             {
+                "id": 2,
+                "title":"1177 - Trauma / Mental Health",
+                "url": "https://www.1177.se/uk/Vastra-Gotaland/other-languages/other-languages/psykisk-halsa---andra-sprak/rad-till-dig-som-mar-daligt-efter-skrammande-handelser---andra-sprak/",
+                "urlType":"website",
+                "description":"Advice and health information, all links.",
+                "imageUrl": "https://www.1177.se/globalassets/1177/nationell/media/fotografier/om-1177-vardguiden/pressbilder/1177-webbplats04.jpg?saved=2022-06-09+02:07&preset=preset_1500",
+             },
+             {
+                "id": 3,
+                "title":"1177 - Dental care",
+                "url": "https://www.1177.se/uk/Vastra-Gotaland/other-languages/other-languages/tandvard-ukrainska/",
+                "urlType":"website",
+                "description":"Advice and health information, all links.",
+                "imageUrl": "https://www.1177.se/globalassets/1177/nationell/media/fotografier/om-1177-vardguiden/pressbilder/1177-webbplats04.jpg?saved=2022-06-09+02:07&preset=preset_1500",
+             },
          ]
       },
       {
          "id":5,
-         "title":"Language",
+         "title":"Parents",
          "description":"{}",
          "subTopics":[
             
@@ -58,21 +166,19 @@
       },
       {
          "id":6,
-         "title":"Language",
+         "title":"General",
          "description":"{}",
          "subTopics":[
-            
+             {
+                "id": 1,
+                "title":"Informationsverige.se",
+                "url": "https://www.informationsverige.se/uk/jag-har-fatt-uppehallstillstand/du-som-har-flytt-fran-kriget-i-ukraina.html",
+                "urlType":"website",
+                "description":"Website with many links gathered in one place for Ukrainians who fled the war.",
+                "imageUrl":"https://www.folkuniversitetet.se/globalassets/dokumentbanken/logotyper/fulogo-rodsvart.png",
+             },
          ]
       },
-      {
-         "id":7,
-         "title":"Language",
-         "description":"{}",
-         "subTopics":[
-            
-         ]
-      }
-      
    ],
    "communities":[
       {

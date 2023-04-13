@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var dataManager: DataManager
-    
+    @EnvironmentObject var delegate: AppDelegate
+    @ObservedObject var topicListViewModel = TopicListViewModel()
     
     var colors: [Color] = [.blue, .green, .red, .orange]
     var items = [GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16), GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16)]
@@ -18,6 +19,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 ScrollView(showsIndicators: false) {
                     Text("Welcome👋🇺🇦🇸🇪!")
                         .font(.title)
@@ -26,37 +28,40 @@ struct ContentView: View {
                         .padding()
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHGrid(rows: items, alignment: .center) {
-                            ForEach(Array(dataManager.topics.enumerated()), id: \.offset) { index, item in
-                                NavigationLink(destination: TopicDetailView(topic: item.subTopics)) {
+                            ForEach(topicListViewModel.topicViewModels) { topicViewModel in
+                                
+                                NavigationLink(destination: TopicDetailView(topic: topicViewModel.topic.subTopics)) {
                                     ZStack{
-                                        AsyncImage(url: URL(string: "https://picsum.photos/180/180")) { image in
+                                        AsyncImage(url: URL(string: topicViewModel.topic.imageUrl)) { image in
                                             image.opacity(0.8).aspectRatio(contentMode: .fit).frame(minWidth: 100, maxWidth: 180, minHeight: 100, maxHeight: 180)
                                         } placeholder: {
                                             ProgressView()
                                         }.cornerRadius(10).shadow(radius: 10)
-                                        Text(item.title).font(.title).fontWeight(.bold).foregroundColor(.white)
+                                        Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white)
                                     }
                                 }.buttonStyle(PlainButtonStyle())
                             }
-                        }.padding(.horizontal)
-                    }
-                    Section("Ukrainian Communitys in Sweden") {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHGrid(rows: communityItems) {
-                                ForEach(dataManager.communities) { community in
-                                    ZStack{
-                                        AsyncImage(url: URL(string: "https://picsum.photos/180/180")) { image in
-                                            image.opacity(0.8)
-                                        } placeholder: {
-                                            ProgressView()
-                                        }.cornerRadius(10).shadow(radius: 10)
-                                        Text(community.title).font(.title).fontWeight(.bold).foregroundColor(.white)
-                                    }
-                                }
-                            }.padding(.horizontal)
+                        }.padding()
+                            
+                      
                         }
-                    }
-                    Section("Phone numbers") {
+                        Section("Ukrainian Communitys in Sweden") {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                LazyHGrid(rows: communityItems) {
+                                    ForEach(dataManager.communities) { community in
+                                        ZStack{
+                                            AsyncImage(url: URL(string: "https://picsum.photos/180/180")) { image in
+                                                image.opacity(0.8)
+                                            } placeholder: {
+                                                ProgressView()
+                                            }.cornerRadius(10).shadow(radius: 10)
+                                            Text(community.title).font(.title).fontWeight(.bold).foregroundColor(.white)
+                                        }
+                                    }
+                                }.padding(.horizontal)
+                            }
+                        }
+                        Section("Phone numbers") {
                             ForEach(dataManager.emergencyNumbers) { emergencyNumber in
                                 Button {
                                     UIApplication.shared.open(URL(string: "tel:11414")!)
@@ -67,18 +72,19 @@ struct ContentView: View {
                                             Text(emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
                                             Spacer()
                                             Image(systemName: "phone.fill").padding(.trailing, 10)
-                       
+                                            
                                         }
-                                      
+                                        
                                     }.padding(5)
                                 }
                             }
+                        }
                     }
                 }
             }
         }
     }
-}
+
 //
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {

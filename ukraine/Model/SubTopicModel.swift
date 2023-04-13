@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct SubTopicModel: Decodable, Identifiable {
+struct SubTopicModel: Codable, Identifiable {
     var id: Int
     var title: String
     var url: String

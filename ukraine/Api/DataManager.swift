@@ -7,6 +7,10 @@
 
 import Foundation
 import Combine
+import Firebase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class DataManager: ObservableObject {
     
@@ -15,17 +19,20 @@ class DataManager: ObservableObject {
     @Published var communities : [CommunityModel] = []
     @Published var emergencyNumbers : [EmergencyNumbersModel] = []
     @Published var isLoading: Bool = true
-    
+
+  
     var cancellables = Set<AnyCancellable>()
     
     
     init() {
+  
         fetch()
   
     }
+
     
     func fetch(resetLoading: Bool = true) {
-        
+    
         if resetLoading {
             self.isLoading = true
         }
@@ -39,12 +46,13 @@ class DataManager: ObservableObject {
                 print(err)
             }
         } receiveValue: { response in
-            self.topics = response.topics
+//            self.topics = response.topics
             self.communities = response.communities
             self.emergencyNumbers = response.emergencyNumbers
             self.isLoading = false
+            
         }.store(in: &cancellables)
-
+       
         
     }
     

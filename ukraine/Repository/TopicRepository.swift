@@ -11,41 +11,42 @@ import SwiftUI
 import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseFirestoreCombineSwift
 
-class TopicRepository: ObservableObject {
+
+
+class TopicRepository: ObservableObject, FirestoreRepository {
     
-    @Published var db = Firestore.firestore()
+    typealias T = TopicModel
+
+    internal var cancellables = Set<AnyCancellable>()
+    
+    internal var db: Firestore {
+        return Firestore.firestore()
+    }
+
     @Published var topics: [TopicModel] = []
     
     init() {
-        get()
+        get().sink { completion in
+            switch completion {
+            case .finished:
+                break
+            case .failure(let err):
+                assertionFailure(err.localizedDescription)
+            }
+        } receiveValue: { topics in
+            self.topics = topics
+        }.store(in: &cancellables)
     }
-    
-    func add(_ topic: TopicModel) {
-        do {
-            try db.collection("topic").document(topic.title).setData(from: topic)
-            
-        } catch let error{
-            fatalError("Unable to add card: \(error.localizedDescription).")
-        }
-    }
-    
-    func get() {
-        
-        db.collection("topics")
-           .addSnapshotListener { querySnapshot, error in
-             // 4
-             if let error = error {
-               print("Error getting cards: \(error.localizedDescription)")
-               return
-             }
 
-             // 5
-             self.topics = querySnapshot?.documents.compactMap { document in
-               // 6
-               try? document.data(as: TopicModel.self)
-             } ?? []
-           }
-
+    func get() -> AnyPublisher<[TopicModel], Error> {
+        return Deferred {
+            return self.db.collection(paths.topics.rawValue).snapshotPublisher().compactMap { snapshot in
+                snapshot.documents.compactMap { document in
+                      return try? document.data(as: T.self)
+                }
+            }
+        }.eraseToAnyPublisher()
     }
 }

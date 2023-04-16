@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var dataManager: DataManager
     @EnvironmentObject var delegate: AppDelegate
     @ObservedObject var topicListViewModel = TopicListViewModel()
+    @ObservedObject var communityListViewModel = CommunityListViewModel()
+    @ObservedObject var emergencyNumberViewModel = EmergencyNumberListViewModel()
     
     var colors: [Color] = [.blue, .green, .red, .orange]
     var items = [GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16), GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16)]
@@ -48,28 +49,28 @@ struct ContentView: View {
                         Section("Ukrainian Communitys in Sweden") {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHGrid(rows: communityItems) {
-                                    ForEach(dataManager.communities) { community in
+                                    ForEach(communityListViewModel.communityViewModel) { communityViewModel in
                                         ZStack{
                                             AsyncImage(url: URL(string: "https://picsum.photos/180/180")) { image in
                                                 image.opacity(0.8)
                                             } placeholder: {
                                                 ProgressView()
                                             }.cornerRadius(10).shadow(radius: 10)
-                                            Text(community.title).font(.title).fontWeight(.bold).foregroundColor(.white)
+                                            Text(communityViewModel.community.title).font(.title).fontWeight(.bold).foregroundColor(.white)
                                         }
                                     }
                                 }.padding(.horizontal)
                             }
                         }
                         Section("Phone numbers") {
-                            ForEach(dataManager.emergencyNumbers) { emergencyNumber in
+                            ForEach(emergencyNumberViewModel.emergencyNumberViewModel) { emergencyNumberViewModel in
                                 Button {
-                                    UIApplication.shared.open(URL(string: "tel:11414")!)
+                                    UIApplication.shared.open(URL(string: emergencyNumberViewModel.emergencyNumber.phoneNumber)!)
                                 } label: {
                                     ZStack {
                                         RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity).foregroundColor(.white).shadow(radius: 5)
                                         HStack {
-                                            Text(emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
+                                            Text(emergencyNumberViewModel.emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
                                             Spacer()
                                             Image(systemName: "phone.fill").padding(.trailing, 10)
                                             

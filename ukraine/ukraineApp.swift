@@ -14,10 +14,8 @@ struct ukraineApp: App {
     
     //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    let dataManager: DataManager
     init() {
         FirebaseApp.configure()
-        self.dataManager = DataManager()
     }
     
 
@@ -27,17 +25,16 @@ struct ukraineApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView().environmentObject(dataManager)
+                ContentView()
                     .tabItem {
                         Label("For Ukrainians", systemImage: "tray.and.arrow.down.fill")
                     }
             
-                ContentView().environmentObject(dataManager)
+                ContentView()
                     .tabItem {
                         Label {
                             Text("For Swedes 🇸🇪").font(.title)
                         } icon: {
-//                            Text("For Swedes 🇸🇪")
                         }
 
                     }

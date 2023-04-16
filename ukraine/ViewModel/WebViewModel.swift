@@ -19,6 +19,6 @@ enum WebViewNavigation {
     case backward, forward, reload
 }
 
-enum UrlType: String, Decodable {
+enum UrlType: String, Codable {
     case website, facebook, telegram, instagram
 }

@@ -160,7 +160,6 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
                         }
                     case .reload:
                         webView.reload()
-                    webView.url
                 }
             })
         }

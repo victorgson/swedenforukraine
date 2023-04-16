@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CommunityModel: Decodable, Identifiable {
+struct CommunityModel: Codable, Identifiable {
     var id: Int
     var title: String
     var url: String
@@ -19,7 +19,7 @@ struct CommunityModel: Decodable, Identifiable {
     }
 }
 
-struct EmergencyNumbersModel: Decodable, Identifiable {
+struct EmergencyNumbersModel: Codable, Identifiable {
     var id: Int
     var title: String
     var phoneNumber: String
@@ -31,14 +31,14 @@ struct EmergencyNumbersModel: Decodable, Identifiable {
     }
 }
 
-struct TopicResponse: Decodable {
-    var topics : [TopicModel]
+struct TopicResponse: Codable {
+//    var topics : [TopicModel]
     var communities: [CommunityModel]
     var emergencyNumbers: [EmergencyNumbersModel]
     
     
     enum CodingKeys: CodingKey {
-        case topics
+//        case topics
         case communities
         case emergencyNumbers
     }

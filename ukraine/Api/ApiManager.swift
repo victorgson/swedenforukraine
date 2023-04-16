@@ -21,12 +21,21 @@ class ApiManager: ApiProtocol {
 
     private let session = URLSession.shared
     
+
+
+    
     func fetchTopics() -> AnyPublisher<TopicResponse, Error> {
         let baseUrl = Bundle.main.url(forResource: "data", withExtension: "json")!
+        
+        var request = URLRequest(url: baseUrl)
+             request.httpMethod = "GET"
+               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+               request.addValue("Bearer", forHTTPHeaderField: "Authorization")
         return Deferred { [self] in
             session.dataTaskPublisher(for: baseUrl)
+                
                 .tryMap() { element -> Data in
-
+                    
                     print(element.data)
                     return element.data
                 }

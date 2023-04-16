@@ -19,7 +19,7 @@ struct TopicDetailSectionView: View {
                     AsyncImage(url: URL(string: imageUrl), content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .frame(maxWidth: 200, maxHeight: 200)
                         
                     }, placeholder: {
                         ProgressView()

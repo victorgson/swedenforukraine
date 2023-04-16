@@ -8,17 +8,28 @@
 import SwiftUI
 
 struct ForUkrainiansView: View {
+    @State private var showingSheet = false
+    
     var body: some View {
         NavigationView {
             VStack {
                 
                 ScrollView(showsIndicators: false) {
-                    Text("Welcome👋🇺🇦🇸🇪!")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                    
+                    HStack {
+                        Text("Welcome👋🇺🇦🇸🇪!")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                        
+                
+                        NavigationLink {
+                            ProgressView()
+                        } label: {
+                            Image(systemName: "gearshape.fill").resizable().frame(width: 25, height: 25).padding()
+                        }.frame(width: 44, height: 44).padding().buttonStyle(.plain)
+                        }
+
                     TopicScrollView()
                     CommunityScrollView()
                     EmergencyListView()

@@ -30,7 +30,6 @@ class EmergencyNumberRepository: FirestoreRepository {
                 assertionFailure(err.localizedDescription)
             }
         } receiveValue: { emergencyNumbers in
-            print(emergencyNumbers)
             self.emergencyNumbers = emergencyNumbers
         }.store(in: &cancellables)
     }

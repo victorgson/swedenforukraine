@@ -14,21 +14,28 @@ struct EmergencyListView: View {
         Section("Phone numbers") {
             ForEach(emergencyNumberViewModel.emergencyNumberViewModel) { emergencyNumberViewModel in
                 Button {
-                    UIApplication.shared.open(URL(string: emergencyNumberViewModel.emergencyNumber.phoneNumber)!)
+                    
+                    guard let number = URL(string: "tel://\(emergencyNumberViewModel.emergencyNumber.phoneNumber)") else { return }
+                    
+                    UIApplication.shared.open(number)
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity).foregroundColor(.white).shadow(radius: 5)
                         HStack {
                             Text(emergencyNumberViewModel.emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
                             Spacer()
-                            Image(systemName: "phone.fill").padding(.trailing, 10)
-                            
+                            Image(systemName: "phone.fill").padding(.trailing, 10)   
                         }
-                        
-                    }.padding(5)
+                    }.padding(.horizontal, 10).padding(.top, 5)
                 }
             }
         }
     }
 }
 
+
+struct Previews_EmergencyListView_Previews: PreviewProvider {
+    static var previews: some View {
+        EmergencyListView(emergencyNumberViewModel: EmergencyNumberListViewModel())
+    }
+}

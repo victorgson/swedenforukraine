@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2AC5BB29EC912700283AE8 /* TopicScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5BA29EC912700283AE8 /* TopicScrollView.swift */; };
+		6A2AC5BD29EC91E100283AE8 /* TopicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5BC29EC91E100283AE8 /* TopicCardView.swift */; };
+		6A2AC5C129EC934D00283AE8 /* CommunityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5C029EC934D00283AE8 /* CommunityScrollView.swift */; };
+		6A2AC5C329EC943200283AE8 /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5C229EC943200283AE8 /* CommunityCardView.swift */; };
+		6A2AC5C629EC94DC00283AE8 /* EmergencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5C529EC94DC00283AE8 /* EmergencyListView.swift */; };
 		6A51E85329E05DBA00129910 /* ScrollingHStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A51E85229E05DBA00129910 /* ScrollingHStackModifier.swift */; };
 		6A5A90B329E8942A0054E6E3 /* TopicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A90B229E8942A0054E6E3 /* TopicRepository.swift */; };
 		6A5A90B529E895350054E6E3 /* TopicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A90B429E895350054E6E3 /* TopicListViewModel.swift */; };
@@ -20,8 +25,8 @@
 		6A5A90CB29EC86890054E6E3 /* EmergencyNumberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A90CA29EC86890054E6E3 /* EmergencyNumberRepository.swift */; };
 		6A5A90CD29EC8C140054E6E3 /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A90CC29EC8C140054E6E3 /* CommunityModel.swift */; };
 		6A5A90CF29EC8C310054E6E3 /* EmergencyNumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A90CE29EC8C310054E6E3 /* EmergencyNumbersModel.swift */; };
-		6AC7A36229DEE534003F8E18 /* ukraineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7A36129DEE534003F8E18 /* ukraineApp.swift */; };
-		6AC7A36429DEE534003F8E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7A36329DEE534003F8E18 /* ContentView.swift */; };
+		6AC7A36229DEE534003F8E18 /* UkraineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7A36129DEE534003F8E18 /* UkraineApp.swift */; };
+		6AC7A36429DEE534003F8E18 /* ForUkrainiansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7A36329DEE534003F8E18 /* ForUkrainiansView.swift */; };
 		6AC7A36629DEE536003F8E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7A36529DEE536003F8E18 /* Assets.xcassets */; };
 		6AC7A36929DEE536003F8E18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC7A36829DEE536003F8E18 /* Preview Assets.xcassets */; };
 		6AC7A37029DEE9D1003F8E18 /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7A36F29DEE9D1003F8E18 /* TopicDetailView.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A2AC5BA29EC912700283AE8 /* TopicScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicScrollView.swift; sourceTree = "<group>"; };
+		6A2AC5BC29EC91E100283AE8 /* TopicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCardView.swift; sourceTree = "<group>"; };
+		6A2AC5C029EC934D00283AE8 /* CommunityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityScrollView.swift; sourceTree = "<group>"; };
+		6A2AC5C229EC943200283AE8 /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
+		6A2AC5C529EC94DC00283AE8 /* EmergencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyListView.swift; sourceTree = "<group>"; };
 		6A51E85229E05DBA00129910 /* ScrollingHStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHStackModifier.swift; sourceTree = "<group>"; };
 		6A5A90B229E8942A0054E6E3 /* TopicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicRepository.swift; sourceTree = "<group>"; };
 		6A5A90B429E895350054E6E3 /* TopicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicListViewModel.swift; sourceTree = "<group>"; };
@@ -53,8 +63,8 @@
 		6A5A90CC29EC8C140054E6E3 /* CommunityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
 		6A5A90CE29EC8C310054E6E3 /* EmergencyNumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyNumbersModel.swift; sourceTree = "<group>"; };
 		6AC7A35E29DEE534003F8E18 /* ukraine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ukraine.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC7A36129DEE534003F8E18 /* ukraineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ukraineApp.swift; sourceTree = "<group>"; };
-		6AC7A36329DEE534003F8E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6AC7A36129DEE534003F8E18 /* UkraineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UkraineApp.swift; sourceTree = "<group>"; };
+		6AC7A36329DEE534003F8E18 /* ForUkrainiansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForUkrainiansView.swift; sourceTree = "<group>"; };
 		6AC7A36529DEE536003F8E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AC7A36829DEE536003F8E18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6AC7A36F29DEE9D1003F8E18 /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
@@ -83,6 +93,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2AC5BE29EC92F900283AE8 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				6AC7A36F29DEE9D1003F8E18 /* TopicDetailView.swift */,
+				6AF52E8429DF210400D49FC5 /* TopicDetailSectionView.swift */,
+				6A2AC5BA29EC912700283AE8 /* TopicScrollView.swift */,
+				6A2AC5BC29EC91E100283AE8 /* TopicCardView.swift */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
+		6A2AC5BF29EC933B00283AE8 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				6A2AC5C029EC934D00283AE8 /* CommunityScrollView.swift */,
+				6A2AC5C229EC943200283AE8 /* CommunityCardView.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		6A2AC5C429EC94CA00283AE8 /* EmergencyNumbers */ = {
+			isa = PBXGroup;
+			children = (
+				6A2AC5C529EC94DC00283AE8 /* EmergencyListView.swift */,
+			);
+			path = EmergencyNumbers;
+			sourceTree = "<group>";
+		};
 		6A51E85429E05DC500129910 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,11 +199,11 @@
 				6AC7A37329DEED28003F8E18 /* Views */,
 				6AC7A37229DEED21003F8E18 /* ViewModel */,
 				6AC7A37129DEED1D003F8E18 /* Model */,
-				6AC7A36129DEE534003F8E18 /* ukraineApp.swift */,
-				6AC7A36329DEE534003F8E18 /* ContentView.swift */,
-				6AC7A36529DEE536003F8E18 /* Assets.xcassets */,
 				6AC7A36729DEE536003F8E18 /* Preview Content */,
+				6AC7A36329DEE534003F8E18 /* ForUkrainiansView.swift */,
 				6AE8DA2229E749E1009054B6 /* AppDelegate.swift */,
+				6AC7A36129DEE534003F8E18 /* UkraineApp.swift */,
+				6AC7A36529DEE536003F8E18 /* Assets.xcassets */,
 				6AF52E8329DF1F0D00D49FC5 /* Info.plist */,
 				6AE8DA1929E747B9009054B6 /* GoogleService-Info.plist */,
 			);
@@ -205,10 +243,11 @@
 		6AC7A37329DEED28003F8E18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6AC7A36F29DEE9D1003F8E18 /* TopicDetailView.swift */,
+				6A2AC5C429EC94CA00283AE8 /* EmergencyNumbers */,
+				6A2AC5BF29EC933B00283AE8 /* Community */,
+				6A2AC5BE29EC92F900283AE8 /* Topic */,
 				6AC7A37429DEF380003F8E18 /* WebView.swift */,
 				6AC7A37E29DF0950003F8E18 /* WebViewNavigationBar.swift */,
-				6AF52E8429DF210400D49FC5 /* TopicDetailSectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +332,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5A90B329E8942A0054E6E3 /* TopicRepository.swift in Sources */,
+				6A2AC5C329EC943200283AE8 /* CommunityCardView.swift in Sources */,
+				6A2AC5BB29EC912700283AE8 /* TopicScrollView.swift in Sources */,
 				6A5A90C729EC862C0054E6E3 /* EmergencyNumberViewModel.swift in Sources */,
 				6A51E85329E05DBA00129910 /* ScrollingHStackModifier.swift in Sources */,
 				6AC7A37729DEF6FD003F8E18 /* TopicModel.swift in Sources */,
@@ -303,14 +344,17 @@
 				6AE8DA2329E749E1009054B6 /* AppDelegate.swift in Sources */,
 				6AF52E8529DF210400D49FC5 /* TopicDetailSectionView.swift in Sources */,
 				6AC7A37929DEF74D003F8E18 /* SubTopicModel.swift in Sources */,
+				6A2AC5C629EC94DC00283AE8 /* EmergencyListView.swift in Sources */,
 				6A5A90C929EC86420054E6E3 /* EmergencyNumberListViewModel.swift in Sources */,
 				6AC7A37529DEF380003F8E18 /* WebView.swift in Sources */,
 				6A5A90CF29EC8C310054E6E3 /* EmergencyNumbersModel.swift in Sources */,
+				6A2AC5C129EC934D00283AE8 /* CommunityScrollView.swift in Sources */,
 				6A5A90B729E89BA50054E6E3 /* TopicViewModel.swift in Sources */,
-				6AC7A36429DEE534003F8E18 /* ContentView.swift in Sources */,
+				6AC7A36429DEE534003F8E18 /* ForUkrainiansView.swift in Sources */,
 				6A5A90CB29EC86890054E6E3 /* EmergencyNumberRepository.swift in Sources */,
 				6A5A90C429EC7E7B0054E6E3 /* CommunityListViewModel.swift in Sources */,
-				6AC7A36229DEE534003F8E18 /* ukraineApp.swift in Sources */,
+				6A2AC5BD29EC91E100283AE8 /* TopicCardView.swift in Sources */,
+				6AC7A36229DEE534003F8E18 /* UkraineApp.swift in Sources */,
 				6AC7A37B29DEFE95003F8E18 /* WebViewModel.swift in Sources */,
 				6A5A90CD29EC8C140054E6E3 /* CommunityModel.swift in Sources */,
 				6A5A90B529E895350054E6E3 /* TopicListViewModel.swift in Sources */,

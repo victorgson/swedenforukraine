@@ -10,27 +10,21 @@ import Firebase
 import FirebaseFirestore
 
 @main
-struct ukraineApp: App {
-    
-    //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+struct UkraineApp: App {
     
     init() {
         FirebaseApp.configure()
     }
-    
 
-    
-    
-    
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView()
+                ForUkrainiansView()
                     .tabItem {
                         Label("For Ukrainians", systemImage: "tray.and.arrow.down.fill")
                     }
             
-                ContentView()
+                ForUkrainiansView()
                     .tabItem {
                         Label {
                             Text("For Swedes 🇸🇪").font(.title)

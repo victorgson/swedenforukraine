@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ForUkrainiansView: View {
+    
+    let linearGradient = LinearGradient(colors: [.blue, .yellow], startPoint: .top, endPoint: .bottom)
     @State private var showingSheet = false
     
     var body: some View {
         NavigationView {
             VStack {
-                
                 ScrollView(showsIndicators: false) {
                     HStack {
                         Text("Welcome👋🇺🇦🇸🇪!")
@@ -33,9 +34,9 @@ struct ForUkrainiansView: View {
                     TopicScrollView()
                     CommunityScrollView()
                     EmergencyListView()
-                    }
                 }
-            }
+            }.background(linearGradient)
+        }
         }
     }
 
@@ -43,4 +44,8 @@ struct ForUkrainiansView_Previews: PreviewProvider {
     static var previews: some View {
         ForUkrainiansView()
     }
+}
+
+extension View {
+
 }

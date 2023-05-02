@@ -34,6 +34,7 @@ struct EmergencyListView: View {
 }
 
 
+
 struct Previews_EmergencyListView_Previews: PreviewProvider {
     static var previews: some View {
         EmergencyListView(emergencyNumberViewModel: EmergencyNumberListViewModel())

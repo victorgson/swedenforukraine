@@ -17,10 +17,10 @@ struct TopicCardView: View {
                     image.opacity(0.8).aspectRatio(contentMode: .fit).frame(minWidth: 100, maxWidth: 180, minHeight: 100, maxHeight: 180)
                 } placeholder: {
                     ProgressView()
-                }.cornerRadius(10).shadow(radius: 10)
+                }.cornerRadius(10)
                 Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white)
             }
-        }.buttonStyle(PlainButtonStyle())
+        }.buttonStyle(PlainButtonStyle()).shadow(radius: 10)
     }
 }
 

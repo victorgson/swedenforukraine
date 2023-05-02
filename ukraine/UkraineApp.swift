@@ -17,18 +17,26 @@ struct UkraineApp: App {
     }
 
     var body: some Scene {
+        
         WindowGroup {
             TabView {
                 ForUkrainiansView()
                     .tabItem {
-                        Label("For Ukrainians", systemImage: "tray.and.arrow.down.fill")
+                        Label {
+                            Text("For Ukrainians").font(.title)
+                        } icon: {
+                            Image("UA-flag")
+                        
+                        }
                     }
+                        
             
-                ForUkrainiansView()
+                ForSwedesView()
                     .tabItem {
                         Label {
-                            Text("For Swedes 🇸🇪").font(.title)
+                            Text("For Swedes").font(.title)
                         } icon: {
+                            Image("SE-flag")
                         }
 
                     }

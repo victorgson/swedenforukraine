@@ -8,29 +8,45 @@
 import SwiftUI
 
 struct ForSwedesView: View {
+    
+    @ObservedObject var topicForSwedes = TopicForSwedesListViewModel()
+    
+    let columns = [GridItem(.adaptive(minimum: 100)), GridItem(.adaptive(minimum: 100))]
+    let linearGradient = LinearGradient(colors: [.blue, .yellow, .blue], startPoint: .top, endPoint: .bottom)
+    
     var body: some View {
-        VStack {
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                Section("Donera") {
-                    
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity, maxHeight: 200).foregroundColor(.white).padding()
+        NavigationView {
+            VStack{
+                ScrollView {
+                    HStack {
+                        Text("Welcome👋🇺🇦🇸🇪!")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
                         
-                        Text("Donera").padding().foregroundColor(.red)
+                
+                        NavigationLink {
+                            ProgressView()
+                        } label: {
+                            Image(systemName: "gearshape.fill").resizable().frame(width: 25, height: 25).padding()
+                        }.frame(width: 44, height: 44).padding().buttonStyle(.plain)
+                        }
+                    
+                    LazyVGrid(columns: columns) {
+                        ForEach(topicForSwedes.topicViewModels) { topicViewModel in
+                            TopicCardView(topicViewModel: topicViewModel)
+                        }
                     }
                     
                 }
-
-                    
-
-            }
-           
-        }.frame(maxWidth: .infinity, maxHeight: .infinity) .background(LinearGradient(colors: [.blue, .yellow, .blue], startPoint: .top, endPoint: .bottom))
-        
-       
+            }.background(linearGradient)
+         
+        }
     }
 }
+            
+            
 
 struct ForSwedesView_Previews: PreviewProvider {
     static var previews: some View {

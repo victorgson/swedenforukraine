@@ -15,33 +15,33 @@ struct UkraineApp: App {
     init() {
         FirebaseApp.configure()
     }
-
+    
     var body: some Scene {
         
         WindowGroup {
             TabView {
-                ForUkrainiansView()
-                    .tabItem {
-                        Label {
-                            Text("For Ukrainians").font(.title)
-                        } icon: {
-                            Image("UA-flag")
-                        
+                    ForUkrainiansView()
+                        .tabItem {
+                            Label {
+                                Text("For Ukrainians").font(.title)
+                            } icon: {
+                                Image("UA-flag")
+                                
+                            }
                         }
-                    }
-                        
-            
-                ForSwedesView()
-                    .tabItem {
-                        Label {
-                            Text("For Swedes").font(.title)
-                        } icon: {
-                            Image("SE-flag")
+        
+                    ForSwedesView()
+                        .tabItem {
+                            Label {
+                                Text("For Swedes").font(.title)
+                            } icon: {
+                                Image("SE-flag")
+                            }
+                            
                         }
-
-                    }
+                
             }.tabViewStyle(.automatic)
-   
+            
         }
     }
 }

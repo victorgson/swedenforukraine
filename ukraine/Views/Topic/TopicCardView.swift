@@ -18,7 +18,7 @@ struct TopicCardView: View {
                 } placeholder: {
                     ProgressView()
                 }.cornerRadius(10)
-                Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white)
+                Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white).opacity(0.8)
             }
         }.buttonStyle(PlainButtonStyle()).shadow(radius: 10)
     }

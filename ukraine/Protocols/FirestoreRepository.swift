@@ -9,7 +9,10 @@ import Combine
 import FirebaseFirestore
 
 enum paths: String {
-   case topics, communities, emergency_numbers
+   case topics, communities, emergencyNumbers = "emergency_numbers", topicsForSwedes
+    
+    
+
 }
 
 

@@ -39,6 +39,8 @@
 		6AE1DEEE2A02833A0040F8C2 /* TopicsForSwedesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1DEED2A02833A0040F8C2 /* TopicsForSwedesRepository.swift */; };
 		6AE1DEF02A0284F20040F8C2 /* TopicForSwedesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1DEEF2A0284F20040F8C2 /* TopicForSwedesViewModel.swift */; };
 		6AE1DEF32A02850C0040F8C2 /* TopicForSwedesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1DEF22A02850C0040F8C2 /* TopicForSwedesListViewModel.swift */; };
+		6AE1DEF52A0293420040F8C2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1DEF42A0293420040F8C2 /* SettingsView.swift */; };
+		6AE1DEF72A0293670040F8C2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE1DEF62A0293670040F8C2 /* HeaderView.swift */; };
 		6AE8DA1A29E747B9009054B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AE8DA1929E747B9009054B6 /* GoogleService-Info.plist */; };
 		6AE8DA1D29E74974009054B6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6AE8DA1C29E74974009054B6 /* FirebaseFirestore */; };
 		6AE8DA1F29E74974009054B6 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6AE8DA1E29E74974009054B6 /* FirebaseFirestoreCombine-Community */; };
@@ -81,6 +83,8 @@
 		6AE1DEED2A02833A0040F8C2 /* TopicsForSwedesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsForSwedesRepository.swift; sourceTree = "<group>"; };
 		6AE1DEEF2A0284F20040F8C2 /* TopicForSwedesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicForSwedesViewModel.swift; sourceTree = "<group>"; };
 		6AE1DEF22A02850C0040F8C2 /* TopicForSwedesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicForSwedesListViewModel.swift; sourceTree = "<group>"; };
+		6AE1DEF42A0293420040F8C2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6AE1DEF62A0293670040F8C2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		6AE8DA1929E747B9009054B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AE8DA2229E749E1009054B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF52E8329DF1F0D00D49FC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				6AC7A37129DEED1D003F8E18 /* Model */,
 				6AC7A36729DEE536003F8E18 /* Preview Content */,
 				6AC7A36329DEE534003F8E18 /* ForUkrainiansView.swift */,
+				6AE1DEF42A0293420040F8C2 /* SettingsView.swift */,
 				6AE1DEEB2A0147D70040F8C2 /* ForSwedesView.swift */,
 				6AE8DA2229E749E1009054B6 /* AppDelegate.swift */,
 				6AC7A36129DEE534003F8E18 /* UkraineApp.swift */,
@@ -259,6 +264,7 @@
 				6A2AC5BE29EC92F900283AE8 /* Topic */,
 				6AC7A37429DEF380003F8E18 /* WebView.swift */,
 				6AC7A37E29DF0950003F8E18 /* WebViewNavigationBar.swift */,
+				6AE1DEF62A0293670040F8C2 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,7 +378,9 @@
 				6A2AC5C129EC934D00283AE8 /* CommunityScrollView.swift in Sources */,
 				6A5A90B729E89BA50054E6E3 /* TopicViewModel.swift in Sources */,
 				6AC7A36429DEE534003F8E18 /* ForUkrainiansView.swift in Sources */,
+				6AE1DEF52A0293420040F8C2 /* SettingsView.swift in Sources */,
 				6A5A90CB29EC86890054E6E3 /* EmergencyNumberRepository.swift in Sources */,
+				6AE1DEF72A0293670040F8C2 /* HeaderView.swift in Sources */,
 				6AE1DEF02A0284F20040F8C2 /* TopicForSwedesViewModel.swift in Sources */,
 				6AE1DEEC2A0147D70040F8C2 /* ForSwedesView.swift in Sources */,
 				6A5A90C429EC7E7B0054E6E3 /* CommunityListViewModel.swift in Sources */,

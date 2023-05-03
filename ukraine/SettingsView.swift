@@ -9,7 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Section("About the app") {
+                Text("About")
+                Text("Feedback")
+                Text("Privacy policy")
+                Text("Terms & Conditions")
+            }
+        }
     }
 }
 

@@ -10,12 +10,7 @@ import FirebaseFirestore
 
 enum paths: String {
    case topics, communities, emergencyNumbers = "emergency_numbers", topicsForSwedes
-    
-    
-
 }
-
-
 
 protocol FirestoreRepository {
     associatedtype T: Decodable

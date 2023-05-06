@@ -16,12 +16,17 @@ struct ForUkrainiansView: View {
         NavigationView {
             VStack {
                 ScrollView(showsIndicators: false) {
-                    HeaderView()
                     TopicScrollView()
                     CommunityScrollView()
                     EmergencyListView()
                 }
-            }.background(linearGradient)
+            }.background(linearGradient).toolbar {
+                ToolbarItem(placement: .automatic) {
+                    HeaderView()
+                }
+                
+            }.toolbarBackground(Color.blue, for: .navigationBar).toolbarBackground(Color.yellow, for: .tabBar)
+            
         }
         }
     }

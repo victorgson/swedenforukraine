@@ -18,8 +18,6 @@ struct ForSwedesView: View {
         NavigationView {
             VStack{
                 ScrollView {
-                    HeaderView()
-                    
                     LazyVGrid(columns: columns) {
                         ForEach(topicForSwedes.topicViewModels) { topicViewModel in
                             TopicCardView(topicViewModel: topicViewModel)
@@ -27,7 +25,9 @@ struct ForSwedesView: View {
                     }
                     
                 }
-            }.background(linearGradient)
+            }.background(linearGradient).toolbar {
+                HeaderView()
+            }.toolbarBackground(Color.blue, for: .navigationBar).toolbarBackground(Color.blue, for: .tabBar)
          
         }
     }

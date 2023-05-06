@@ -10,18 +10,20 @@ import SwiftUI
 struct HeaderView: View {
     var body: some View {
         HStack {
-            Text("Welcome👋🇺🇦🇸🇪!")
+            
+            Text("Welcaome👋🇺🇦🇸🇪!").toolbar(content: {
+                
+            })
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
             
-    
-            NavigationLink {
-                SettingsView()
-            } label: {
-                Image(systemName: "gearshape.fill").resizable().frame(width: 25, height: 25).padding()
-            }.frame(width: 44, height: 44).padding().buttonStyle(.plain)
+
+                NavigationLink {
+                    SettingsView()
+                } label: {
+                    Image(systemName: "gearshape.fill").resizable().frame(width: 25, height: 25).padding()
+                }.frame(width: 44, height: 44).buttonStyle(.plain)
             }
     }
 }

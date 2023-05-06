@@ -16,7 +16,7 @@ class WebViewModel : ObservableObject {
 }
 
 enum WebViewNavigation {
-    case backward, forward, reload
+    case backward, forward, share
 }
 
 enum UrlType: String, Codable {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1415C42A06A0F200AA94AA /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1415C32A06A0F200AA94AA /* UIApplicationExtension.swift */; };
 		6A2AC5BB29EC912700283AE8 /* TopicScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5BA29EC912700283AE8 /* TopicScrollView.swift */; };
 		6A2AC5BD29EC91E100283AE8 /* TopicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5BC29EC91E100283AE8 /* TopicCardView.swift */; };
 		6A2AC5C129EC934D00283AE8 /* CommunityScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2AC5C029EC934D00283AE8 /* CommunityScrollView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A1415C32A06A0F200AA94AA /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		6A2AC5BA29EC912700283AE8 /* TopicScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicScrollView.swift; sourceTree = "<group>"; };
 		6A2AC5BC29EC91E100283AE8 /* TopicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCardView.swift; sourceTree = "<group>"; };
 		6A2AC5C029EC934D00283AE8 /* CommunityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityScrollView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1415C22A06A0DA00AA94AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6A1415C32A06A0F200AA94AA /* UIApplicationExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6A2AC5BE29EC92F900283AE8 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +216,7 @@
 		6AC7A36029DEE534003F8E18 /* ukraine */ = {
 			isa = PBXGroup;
 			children = (
+				6A1415C22A06A0DA00AA94AA /* Extensions */,
 				6A5A90B829EC76080054E6E3 /* Protocols */,
 				6A5A90B129E8941B0054E6E3 /* Repository */,
 				6A51E85429E05DC500129910 /* Modifiers */,
@@ -369,6 +380,7 @@
 				6A5A90BE29EC7C5C0054E6E3 /* CommunitiesRepository.swift in Sources */,
 				6A5A90C229EC7E730054E6E3 /* CommunityViewModel.swift in Sources */,
 				6AE8DA2329E749E1009054B6 /* AppDelegate.swift in Sources */,
+				6A1415C42A06A0F200AA94AA /* UIApplicationExtension.swift in Sources */,
 				6AF52E8529DF210400D49FC5 /* TopicDetailSectionView.swift in Sources */,
 				6AC7A37929DEF74D003F8E18 /* SubTopicModel.swift in Sources */,
 				6A2AC5C629EC94DC00283AE8 /* EmergencyListView.swift in Sources */,

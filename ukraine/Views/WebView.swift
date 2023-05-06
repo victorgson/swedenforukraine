@@ -42,10 +42,8 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
         // Enable javascript in WKWebView
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = true
-
         
         let configuration = WKWebViewConfiguration()
-
         // Here "iOSNative" is our delegate name that we pushed to the website that is being loaded
         configuration.userContentController.add(self.makeCoordinator(), name: "iOSNative")
         configuration.preferences = preferences
@@ -54,7 +52,7 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
         webView.navigationDelegate = context.coordinator
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.isScrollEnabled = true
-       return webView
+        return webView
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
@@ -62,16 +60,16 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
             switch self.urlType {
             case .website:
                 webView.load(URLRequest(url: url))
-//            case .facebook:
-//                let url = URL(string: "fb://profile/682101599891991")!
-//                      let application = UIApplication.shared
-//                      // Check if the facebook App is installed
-//                      if application.canOpenURL(url) {
-//                          application.open(url)
-//                      } else {
-//                          // If Facebook App is not installed, open Safari with Facebook Link
-//                          application.open(url)
-//                      }
+                //            case .facebook:
+                //                let url = URL(string: "fb://profile/682101599891991")!
+                //                      let application = UIApplication.shared
+                //                      // Check if the facebook App is installed
+                //                      if application.canOpenURL(url) {
+                //                          application.open(url)
+                //                      } else {
+                //                          // If Facebook App is not installed, open Safari with Facebook Link
+                //                          application.open(url)
+                //                      }
             default:
                 webView.load(URLRequest(url: url))
             }
@@ -148,22 +146,31 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
             // Shows loader
             parent.viewModel.showLoader.send(true)
-            self.webViewNavigationSubscriber = self.parent.viewModel.webViewNavigationPublisher.receive(on: RunLoop.main).sink(receiveValue: { navigation in
+            self.webViewNavigationSubscriber = self.parent.viewModel.webViewNavigationPublisher.receive(on: RunLoop.main).sink(receiveValue: { [weak self] navigation in
+                guard let self else { return }
+                
                 switch navigation {
-                    case .backward:
-                        if webView.canGoBack {
-                            webView.goBack()
-                        }
-                    case .forward:
-                        if webView.canGoForward {
-                            webView.goForward()
-                        }
-                    case .reload:
-                        webView.reload()
+                case .backward:
+                    if webView.canGoBack {
+                        webView.goBack()
+                    }
+                case .forward:
+                    if webView.canGoForward {
+                        webView.goForward()
+                    }
+                case .share:
+                    shareButtonTapped(url: webView.url)
+                    
                 }
             })
         }
         
+        func shareButtonTapped(url: URL?) {
+            guard let url = url else { return }
+            let window = UIApplication.shared.currentUIWindow()
+            let ac = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+            window?.rootViewController?.present(ac, animated: true)
+        }
         // This function is essential for intercepting every navigation in the webview
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             // Suppose you don't want your user to go a restricted site

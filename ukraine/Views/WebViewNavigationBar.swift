@@ -42,9 +42,9 @@ struct WebViewNavigationBar: View {
                         Spacer()
                     }
                     Button(action: {
-                        self.viewModel.webViewNavigationPublisher.send(.reload)
+                        self.viewModel.webViewNavigationPublisher.send(.share)
                     }) {
-                        Image(systemName: "arrow.clockwise")
+                        Image(systemName: "square.and.arrow.up")
                             .font(.system(size: 20, weight: .regular))
                             .imageScale(.large)
                             .foregroundColor(.gray).padding(.bottom, 4)

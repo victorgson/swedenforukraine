@@ -25,17 +25,16 @@ struct TopicDetailSectionView: View {
                         ProgressView()
                     })
                 }
-         
-                
-   
+
                 Spacer()
                 Text(topic.description).frame(maxWidth: .infinity, alignment: .leading)
                 Spacer()
                 NavigationLink("Website"){
                     
-                    WebView(url: topic.url, urlType: topic.urlType, viewModel: viewModel)
+                    WebView(url: topic.url, urlType: topic.urlType, viewModel: viewModel).toolbar(.hidden, for: .tabBar)
             
                     WebViewNavigationBar(viewModel: viewModel)
+                   
                 }
             }
             

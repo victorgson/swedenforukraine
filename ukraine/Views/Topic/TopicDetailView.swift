@@ -11,17 +11,15 @@ struct TopicDetailView: View {
     var topic: [SubTopicModel]
     @ObservedObject var viewModel: WebViewModel = WebViewModel()
     
-    
-    
-    
     var body: some View {
-        
         List {
             ForEach(topic) { topic in
                 TopicDetailSectionView(topic: topic, viewModel: viewModel)
-            }
+            }.listRowBackground(Color.white)
             
         }.listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+            .background(theme: .ukraine)
     }
 }
 

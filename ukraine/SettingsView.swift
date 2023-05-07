@@ -9,14 +9,17 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        List {
-            Section("About the app") {
-                Text("About")
-                Text("Feedback")
-                Text("Privacy policy")
-                Text("Terms & Conditions")
+        ZStack {
+            List {
+                Section("About the app") {
+                    Text("About")
+                    Text("Feedback")
+                    Text("Privacy policy")
+                    Text("Terms & Conditions")
+                }
             }
-        }
+        }.scrollContentBackground(.hidden)
+            .background(theme: .ukraine)
     }
 }
 

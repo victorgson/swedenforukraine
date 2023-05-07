@@ -19,31 +19,32 @@ struct TopicDetailSectionView: View {
                     AsyncImage(url: URL(string: imageUrl), content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(maxWidth: 200, maxHeight: 200)
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity, maxHeight: 100)
+                            .cornerRadius(10)
+                            .padding()
                         
                     }, placeholder: {
                         ProgressView()
                     })
                 }
-
+                
                 Spacer()
                 Text(topic.description).frame(maxWidth: .infinity, alignment: .leading)
                 Spacer()
                 NavigationLink("Website"){
+                    WebView(url: topic.url, urlType: topic.urlType, viewModel: viewModel)
                     
-                    WebView(url: topic.url, urlType: topic.urlType, viewModel: viewModel).toolbar(.hidden, for: .tabBar)
-            
                     WebViewNavigationBar(viewModel: viewModel)
-                   
-                }
+                    
+                }.toolbar(.hidden, for: .tabBar)
             }
-            
         }.shadow(radius: -20)
     }
 }
 
-//struct TopicDetailSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopicDetailSectionView(topic: SubTopicModel(id: 1, title: "asd", url: "", description: "asd", imageUrl: ""), viewModel: WebViewModel())
-//    }
-//}
+struct TopicDetailSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopicDetailSectionView(topic: SubTopicModel(id: 1, title: "asd", url: "",urlType: .website, description: "asd", imageUrl: ""), viewModel: WebViewModel())
+    }
+}

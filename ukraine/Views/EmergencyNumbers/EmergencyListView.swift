@@ -10,8 +10,11 @@ import SwiftUI
 struct EmergencyListView: View {
     
     @ObservedObject var emergencyNumberViewModel = EmergencyNumberListViewModel()
+    
     var body: some View {
-        Section("Phone numbers") {
+        Section(content: {
+            Text("Phone numbers").font(.body).foregroundColor(.white).fontWeight(.bold)
+        }, footer: {
             ForEach(emergencyNumberViewModel.emergencyNumberViewModel) { emergencyNumberViewModel in
                 Button {
                     
@@ -20,16 +23,16 @@ struct EmergencyListView: View {
                     UIApplication.shared.open(number)
                 } label: {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity).foregroundColor(.white).shadow(radius: 5)
+                        RoundedRectangle(cornerRadius: 10).frame(maxWidth: .infinity).foregroundColor(.blue).opacity(0.8).shadow(radius: 5)
                         HStack {
-                            Text(emergencyNumberViewModel.emergencyNumber.title).font(.headline).fontWeight(.bold).padding()
+                            Text(emergencyNumberViewModel.emergencyNumber.title).font(.headline).fontWeight(.bold).padding().foregroundColor(.white)
                             Spacer()
-                            Image(systemName: "phone.fill").padding(.trailing, 10)   
+                            Image(systemName: "phone.fill").padding(.trailing, 10).foregroundColor(.white)
                         }
                     }.padding(.horizontal, 10).padding(.top, 5)
                 }
             }
-        }
+        })
     }
 }
 

@@ -11,11 +11,10 @@ struct ForSwedesView: View {
     
     @ObservedObject var topicForSwedes = TopicForSwedesListViewModel()
     
-    let columns = [GridItem(.adaptive(minimum: 100)), GridItem(.adaptive(minimum: 100))]
+    let columns = [GridItem(.adaptive(minimum: 200))]
     let linearGradient = LinearGradient(colors: [.blue, .yellow, .blue], startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        NavigationView {
             VStack{
                 ScrollView {
                     LazyVGrid(columns: columns) {
@@ -25,11 +24,7 @@ struct ForSwedesView: View {
                     }
                     
                 }
-            }.background(linearGradient).toolbar {
-                HeaderView()
-            }.toolbarBackground(Color.blue, for: .navigationBar).toolbarBackground(Color.blue, for: .tabBar)
-         
-        }
+            }
     }
 }
             

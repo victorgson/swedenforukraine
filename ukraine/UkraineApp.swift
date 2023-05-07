@@ -17,31 +17,35 @@ struct UkraineApp: App {
     }
     
     var body: some Scene {
-        
         WindowGroup {
             TabView {
-                    ForUkrainiansView()
+                Group {
+                    NavigationView {
+                        ForUkrainiansView().navigationBar(with: "Welcome👋🇺🇦!", icon: "gearshape.fill")
+                    }.tint(.white)
                         .tabItem {
                             Label {
-                                Text("For Ukrainians").font(.title)
+                                Text("For Ukrainians").font(.title).foregroundColor(.white)
                             } icon: {
                                 Image("UA-flag")
                                 
                             }
                         }
-        
-                    ForSwedesView()
+                }
+                Group {
+                    NavigationView {
+                        ForSwedesView().background(theme: .ukraine).navigationBar(with: "Welcome👋🇸🇪!", icon: "gearshape.fill")
+                    }.tint(.white)
                         .tabItem {
                             Label {
-                                Text("For Swedes").font(.title)
+                                Text("For Swedes").font(.title).foregroundColor(.white)
                             } icon: {
                                 Image("SE-flag")
                             }
                             
                         }
-                
+                }
             }.tabViewStyle(.automatic)
-            
         }
     }
 }

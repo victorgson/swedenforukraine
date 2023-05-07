@@ -11,7 +11,10 @@ struct CommunityScrollView: View {
     
     @ObservedObject var communityListViewModel = CommunityListViewModel()
     var body: some View {
-        Section("Ukrainian Communitys in Sweden") {
+        // TODO: Make this section reusable, as it's used in EmergencyListView as well.
+        Section(content: {
+            Text("Ukrainian communities in Sweden").font(.body).foregroundColor(.white).fontWeight(.bold)
+        }, footer: {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: [GridItem(.fixed(180))]) {
                     ForEach(communityListViewModel.communityViewModel) { communityViewModel in
@@ -19,7 +22,7 @@ struct CommunityScrollView: View {
                     }
                 }.padding(.horizontal)
             }
-        }
+        })
     }
 }
 

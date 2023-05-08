@@ -10,6 +10,7 @@ import Foundation
 struct CommunityModel: Codable, Identifiable {
     var id: Int
     var title: String
+    var subTitle: String?
     var url: String
     var imageUrl: String
     
@@ -18,5 +19,6 @@ struct CommunityModel: Codable, Identifiable {
         case title
         case url
         case imageUrl
+        case subTitle
     }
 }

@@ -38,9 +38,8 @@ struct NavigationBarModifier: ViewModifier {
         UINavigationBar.appearance().standardAppearance = standardAppearance
         UINavigationBar.appearance().compactAppearance = navigationAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = standardAppearance
-        
-        
     }
+    
     func body(content: Content) -> some View {
         content
             .navigationTitle(text)
@@ -52,7 +51,6 @@ struct NavigationBarModifier: ViewModifier {
                         Image(systemName: icon).resizable().frame(width: 25, height: 25).padding()
                     }.frame(width: 44, height: 44).buttonStyle(.plain).foregroundColor(.white)
                 }
-                
             }
             .toolbarBackground(Color.yellow, for: .tabBar)
     }

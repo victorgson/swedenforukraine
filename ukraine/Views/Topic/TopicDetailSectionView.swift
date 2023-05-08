@@ -27,6 +27,8 @@ struct TopicDetailSectionView: View {
                     }, placeholder: {
                         ProgressView()
                     })
+                } else {
+                    Text(topic.title).font(.title).bold()
                 }
                 
                 Spacer()

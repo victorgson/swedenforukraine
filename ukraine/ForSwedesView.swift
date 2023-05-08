@@ -11,18 +11,19 @@ struct ForSwedesView: View {
     
     @ObservedObject var topicForSwedes = TopicForSwedesListViewModel()
     
-    let columns = [GridItem(.adaptive(minimum: 200))]
+    let columns = [GridItem(.fixed(200))]
     let linearGradient = LinearGradient(colors: [.blue, .yellow, .blue], startPoint: .top, endPoint: .bottom)
     
     var body: some View {
             VStack{
+  
                 ScrollView {
-                    LazyVGrid(columns: columns) {
-                        ForEach(topicForSwedes.topicViewModels) { topicViewModel in
-                            TopicCardView(topicViewModel: topicViewModel)
-                        }
+
+                    ForEach(topicForSwedes.topicViewModels) { topicViewModel in
+                        TopicCardView(topicViewModel: topicViewModel, isWide: true)
                     }
-                    
+
+
                 }
             }
     }

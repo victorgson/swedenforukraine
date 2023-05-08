@@ -8,18 +8,41 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    
+    @Environment(\.openURL) private  var openURL
+    let url = URL(string: "https://www.apple.com")
+    let email = URL(string: "message://")
+    
     var body: some View {
         ZStack {
             List {
                 Section("About the app") {
-                    Text("About")
-                    Text("Feedback")
+                    NavigationLink("About") {
+                        AboutView()
+                    }
+                    Text("Contact & Feedback")
+                        .onTapGesture {
+                            openURL(URL(string: "mailto:victorgson@icloud.com")!)
+                        }
                     Text("Privacy policy")
+                        .onTapGesture {
+                            openURL(url!)
+                        }
                     Text("Terms & Conditions")
+                        .onTapGesture {
+                            openURL(url!)
+                        }
+                  
+                    
+                    
+                    
+                    
                 }
             }
-        }.scrollContentBackground(.hidden)
-            .background(theme: .ukraine)
+        }
+        .scrollContentBackground(.hidden)
+        .background(theme: .ukraine)
     }
 }
 

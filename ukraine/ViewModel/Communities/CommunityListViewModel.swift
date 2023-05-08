@@ -17,6 +17,7 @@ class CommunityListViewModel: ObservableObject {
         init() {
             communityRepository.$communities.map { community in
                 community.map(CommunityViewModel.init)
+                    .sorted {$0.id < $1.id}
           }
             .assign(to: \.communityViewModel, on: self)
           .store(in: &cancellables)

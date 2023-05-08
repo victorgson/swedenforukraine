@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommunityCardView: View {
-    
+    @Environment(\.openURL) private  var openURL
     @ObservedObject var communityViewModel: CommunityViewModel
     
     var body: some View {
@@ -19,6 +19,8 @@ struct CommunityCardView: View {
                 Text(communityViewModel.community.subTitle ?? "").font(.subheadline).fontWeight(.semibold).foregroundColor(.white)
             }
         
+        }.onTapGesture {
+            openURL(URL(string: communityViewModel.community.url)!)
         }
     }
 }

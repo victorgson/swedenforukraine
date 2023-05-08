@@ -13,11 +13,13 @@ struct TopicCardView: View {
     var body: some View {
         NavigationLink(destination: TopicDetailView(topic: topicViewModel.topic.subTopics)) {
             ZStack{
-                AsyncImage(url: URL(string: topicViewModel.topic.imageUrl)) { image in
-                    image.opacity(0.8).aspectRatio(contentMode: .fit).frame(minWidth: 100, maxWidth: 180, minHeight: 100, maxHeight: 180)
-                } placeholder: {
-                    ProgressView()
-                }.cornerRadius(10)
+                Image(topicViewModel.topic.imageUrl).resizable().frame(width: 150, height: 120).aspectRatio(contentMode: .fill).cornerRadius(10).opacity(0.8)
+                   // .opacity(0.8).aspectRatio(contentMode: .fit).frame(minWidth: 100, maxWidth: 180, minHeight: 100, maxHeight: 180).scaledToFit()
+//                AsyncImage(url: URL(string: topicViewModel.topic.imageUrl)) { image in
+//                    image.opacity(0.8).aspectRatio(contentMode: .fit).frame(minWidth: 100, maxWidth: 180, minHeight: 100, maxHeight: 180)
+//                } placeholder: {
+//                    ProgressView()
+//                }.cornerRadius(10)
                 Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white).opacity(0.8)
             }
         }.buttonStyle(PlainButtonStyle()).shadow(radius: 10)

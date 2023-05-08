@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopicScrollView: View {
     
-    var items = [GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16), GridItem(.flexible(minimum: 100, maximum: 180), spacing: 16)]
+    var items = [GridItem(.fixed(120), spacing: 16), GridItem(.fixed(120), spacing: 16)]
     @ObservedObject var topicListViewModel = TopicListViewModel()
     
     var body: some View {

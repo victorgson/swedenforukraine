@@ -13,11 +13,7 @@ struct CommunityCardView: View {
     
     var body: some View {
         ZStack{
-            AsyncImage(url: URL(string: "https://picsum.photos/180/180")) { image in
-                image.opacity(0.8)
-            } placeholder: {
-                ProgressView()
-            }.cornerRadius(10).shadow(radius: 10)
+            Image(communityViewModel.community.imageUrl).resizable().frame(width: 150, height: 150).opacity(0.8).cornerRadius(10)
             Text(communityViewModel.community.title).font(.title).fontWeight(.bold).foregroundColor(.white)
         }
     }

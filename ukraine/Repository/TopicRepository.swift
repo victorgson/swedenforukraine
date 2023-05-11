@@ -18,13 +18,13 @@ import FirebaseFirestoreCombineSwift
 class TopicRepository: ObservableObject, FirestoreRepository {
     
     typealias T = TopicModel
-
+    
     internal var cancellables = Set<AnyCancellable>()
     
     internal var db: Firestore {
         return Firestore.firestore()
     }
-
+    
     @Published var topics: [TopicModel] = []
     
     init() {
@@ -39,14 +39,25 @@ class TopicRepository: ObservableObject, FirestoreRepository {
             self.topics = topics
         }.store(in: &cancellables)
     }
-
+    
+    enum APIError: LocalizedError {
+        /// Invalid request, e.g. invalid URL
+        case invalidRequestError(String)
+    }
+    
     func get() -> AnyPublisher<[TopicModel], Error> {
+        
         return Deferred {
-            return self.db.collection(paths.topics.rawValue).snapshotPublisher().compactMap { snapshot in
-                snapshot.documents.compactMap { document in
-                      return try? document.data(as: T.self)
+            
+            return self.db.collection(paths.topics.rawValue)
+                .getDocuments()
+                .tryMap { snapshot in
+                    try snapshot.documents.compactMap { document in
+                        try document.data(as: T.self)
+                    }
                 }
-            }
+            
+            
         }.eraseToAnyPublisher()
     }
 }

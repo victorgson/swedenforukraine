@@ -19,9 +19,8 @@ struct UkraineApp: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                Group {
                     NavigationView {
-                        ForUkrainiansView().navigationBar(with: "Welcome👋🇺🇦!", icon: "gearshape.fill")
+                        ForUkrainiansView()
                     }.tint(.white)
                         .tabItem {
                             Label {
@@ -30,9 +29,7 @@ struct UkraineApp: App {
                                 Image("UA-flag")
                                 
                             }
-                        }
-                }
-                Group {
+                        } 
                     NavigationView {
                         ForSwedesView().background(theme: .ukraine).navigationBar(with: "Welcome👋🇸🇪!", icon: "gearshape.fill")
                     }.tint(.white)
@@ -44,7 +41,6 @@ struct UkraineApp: App {
                             }
                             
                         }
-                }
             }.tabViewStyle(.automatic)
         }
     }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ForUkrainiansView: View {
-    @State private var showingSheet = false
     var body: some View {
             VStack {
                 ScrollView(showsIndicators: false) {
@@ -17,8 +16,9 @@ struct ForUkrainiansView: View {
                     EmergencyListView()
                 }
             }.background(theme: .ukraine)
+                .navigationBar(with: "Welcome👋🇺🇦!", icon: "gearshape.fill")
+            }
     }
-}
 
 struct ForUkrainiansView_Previews: PreviewProvider {
     static var previews: some View {

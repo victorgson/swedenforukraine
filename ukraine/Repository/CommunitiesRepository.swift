@@ -41,7 +41,8 @@ class CommunitiesRepository: FirestoreRepository {
     
     func get() -> AnyPublisher<[CommunityModel], Error> {
         return Deferred {
-            return self.db.collection(paths.communities.rawValue).snapshotPublisher().map { snapshot in
+            return self.db.collection(paths.communities.rawValue).getDocuments()
+                .map { snapshot in
                 snapshot.documents.compactMap { document in
                     return try? document.data(as: T.self)
                 }

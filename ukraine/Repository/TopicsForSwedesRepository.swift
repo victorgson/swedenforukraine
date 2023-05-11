@@ -43,7 +43,7 @@ class TopicsForSwedesRepository: ObservableObject, FirestoreRepository {
 
     func get() -> AnyPublisher<[TopicModel], Error> {
         return Deferred {
-            return self.db.collection(paths.topicsForSwedes.rawValue).snapshotPublisher().compactMap { snapshot in
+            return self.db.collection(paths.topicsForSwedes.rawValue).getDocuments().compactMap { snapshot in
                 snapshot.documents.compactMap { document in
                     dump(try? document.data(as: T.self))
                       return try? document.data(as: T.self)

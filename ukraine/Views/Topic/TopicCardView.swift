@@ -18,13 +18,13 @@ struct TopicCardView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.white)
                         .frame(maxWidth: .infinity, idealHeight: 100).padding(.horizontal, 10).opacity(0.8).shadow(radius: 10)
-                    Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.black)
+                    Text(LocalizedStringKey( topicViewModel.topic.title)).font(.title).fontWeight(.bold).foregroundColor(.black)
                     
                 }.padding(.top, 20)
             } else {
                 ZStack{
                     Image(topicViewModel.topic.imageUrl).resizable().frame(width: 150, height: 120).aspectRatio(contentMode: .fill).cornerRadius(10).opacity(0.8)
-                    Text(topicViewModel.topic.title).font(.title).fontWeight(.bold).foregroundColor(.white).opacity(0.8)
+                    Text(LocalizedStringKey(topicViewModel.topic.title)).font(.title).fontWeight(.bold).foregroundColor(.white).opacity(0.8)
                 }
             }
 

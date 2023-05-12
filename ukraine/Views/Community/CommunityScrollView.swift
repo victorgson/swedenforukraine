@@ -13,7 +13,7 @@ struct CommunityScrollView: View {
     var body: some View {
         // TODO: Make this section reusable, as it's used in EmergencyListView as well.
         Section(content: {
-            Text("Ukrainian communities in Sweden").font(.body).foregroundColor(.white).fontWeight(.bold)
+            Text(Localize.ukrainian_communities.string).font(.body).foregroundColor(.white).fontWeight(.bold)
         }, footer: {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: [GridItem(.fixed(180))]) {

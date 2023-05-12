@@ -7,58 +7,35 @@
 
 import SwiftUI
 
-enum Language: String {
-    case Ukrainian, Swedish, English
-}
-
 struct SettingsView: View {
-    
-    let lang: [Language] = [.Ukrainian, .Swedish, .English ]
-    
     @Environment(\.openURL) private  var openURL
     let url = URL(string: "https://www.apple.com")
     let email = URL(string: "message://")
     
-    @State var selectedLanguage : Language = .Ukrainian
-    
     var body: some View {
-        
         ZStack {
             List {
-                
-                Section("About the app") {
-                    
-                    NavigationLink("About") {
+                Section(Localize.settings.string) {
+                    NavigationLink(Localize.about.string) {
                         AboutView()
                     }
-                    Text("Contact & Feedback")
+                    Text(Localize.contact.string)
                         .onTapGesture {
                             openURL(URL(string: "mailto:victorgson@icloud.com")!)
                         }
-                    Text("Privacy policy")
+                    Text(Localize.privacy_policy.string)
                         .onTapGesture {
                             openURL(url!)
                         }
-                    Text("Terms & Conditions")
+                    Text(Localize.terms_and_condition.string)
                         .onTapGesture {
                             openURL(url!)
                         }
-
-                }
-                
-                Section("Language") {
-                    Picker("Language", selection: $selectedLanguage) {
-                        ForEach(lang, id: \.self) { language in
-                            Text(language.rawValue)
-                        }
-                    }.pickerStyle(.segmented)
                 }
             }
         }
         .scrollContentBackground(.hidden)
         .background(theme: .ukraine)
-        
-
     }
 }
 

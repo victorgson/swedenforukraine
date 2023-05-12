@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 enum Theme {
     case sweden, ukraine
     var backgroundColor: LinearGradient {
@@ -21,9 +20,7 @@ enum Theme {
 }
 
 struct AppThemeModifier: ViewModifier {
-    
     var theme: Theme = .ukraine
-    
     func body(content: Content) -> some View {
         content
             .background(theme.backgroundColor)

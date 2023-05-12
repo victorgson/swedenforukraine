@@ -9,16 +9,15 @@ import SwiftUI
 
 struct ForUkrainiansView: View {
     var body: some View {
-            VStack {
-                ScrollView(showsIndicators: false) {
-                    TopicScrollView()
-                    CommunityScrollView()
-                    EmergencyListView()
-                }
-            }.background(theme: .ukraine)
-                .navigationBar(with: "Welcome👋🇺🇦!", icon: "gearshape.fill")
+        VStack {
+            ScrollView(showsIndicators: false) {
+                TopicScrollView()
+                CommunityScrollView()
+                EmergencyListView()
             }
+        }
     }
+}
 
 struct ForUkrainiansView_Previews: PreviewProvider {
     static var previews: some View {

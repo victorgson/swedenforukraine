@@ -49,7 +49,7 @@ class TopicRepository: ObservableObject, FirestoreRepository {
         
         return Deferred {
             
-            return self.db.collection(paths.topics.rawValue)
+            return self.db.collection(Paths.topics.rawValue)
                 .getDocuments()
                 .tryMap { snapshot in
                     try snapshot.documents.compactMap { document in

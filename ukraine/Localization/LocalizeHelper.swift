@@ -8,7 +8,28 @@
 import Foundation
 
 enum Localize: String {
-    case example
+    case welcome
+    case ukrainian_communities
+    case phonenumbers
+    case general
+    case jobs
+    case language
+    case housing
+    case healthcare
+    case parents
+    case about
+    case contact
+    case privacy_policy
+    case terms_and_condition
+    case emergency
+    case not_emergency
+    case medical
+    case for_ukrainians
+    case for_swedes
+    case settings
+    case donate
+    case housing_ukrainians
+    case volunteer
 }
 
 extension Localize {

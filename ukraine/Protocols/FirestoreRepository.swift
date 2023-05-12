@@ -8,7 +8,7 @@
 import Combine
 import FirebaseFirestore
 
-enum paths: String {
+enum Paths: String {
    case topics, communities, emergencyNumbers = "emergency_numbers", topicsForSwedes
 }
 

@@ -13,7 +13,6 @@ class CommunityListViewModel: ObservableObject {
 
     private var cancellables: Set<AnyCancellable> = []
     @Published var communityViewModel: [CommunityViewModel] = []
-    
         init() {
             communityRepository.$communities.map { community in
                 community.map(CommunityViewModel.init)
@@ -23,6 +22,3 @@ class CommunityListViewModel: ObservableObject {
           .store(in: &cancellables)
         }
     }
-    
-
-

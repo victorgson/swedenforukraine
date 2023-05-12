@@ -5,3 +5,37 @@
   Created by Victor Gustafsson on 2023-05-12.
   
 */
+
+// General
+"welcome" = "Welcome";
+"ukrainian_communities" = "Ukrainian communities in Sweden";
+"phonenumbers" = "Phone numbers";
+
+// Topics
+"general" = "General";
+"jobs" = "Jobs";
+"language" = "Language";
+"housing" = "Housing";
+"healthcare" = "Healthcare";
+"parents" = "Parents";
+
+// Topics for Swedes
+"donate" = "Donate";
+"housing_ukrainians" = "Housing for Ukrainians";
+"volunteer" = "Volunteer";
+
+// Settings
+"about" = "About";
+"contact" = "Contact & Feedback";
+"privacy_policy" = "Privacy policy";
+"terms_and_condition" = "Terms & Condition";
+"settings" = "Settings";
+
+// Phone numbers
+"emergency" = "In emergency - 112";
+"not_emergency" = "Police, no emergency - 114 14";
+"medical" = "Medical advice - 1177";
+
+// TabBar
+"for_ukrainians" = "For Ukrainians";
+"for_swedes" = "For Swedes";

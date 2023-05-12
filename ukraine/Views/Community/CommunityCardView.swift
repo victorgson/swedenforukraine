@@ -10,9 +10,8 @@ import SwiftUI
 struct CommunityCardView: View {
     @Environment(\.openURL) private  var openURL
     @ObservedObject var communityViewModel: CommunityViewModel
-    
     var body: some View {
-        ZStack{
+        ZStack {
             Image(communityViewModel.community.imageUrl).resizable().frame(width: 150, height: 150).opacity(0.8).cornerRadius(10)
             VStack {
                 Text(communityViewModel.community.title)
@@ -24,7 +23,6 @@ struct CommunityCardView: View {
                     .padding(.horizontal, 10)
                 Text(communityViewModel.community.subTitle ?? "").font(.subheadline).fontWeight(.semibold).foregroundColor(.white)
             }.frame(width: 150)
-        
         }.onTapGesture {
             openURL(URL(string: communityViewModel.community.url)!)
         }

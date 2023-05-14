@@ -7,35 +7,35 @@
 */
 
 // General
-"welcome" = "Välkommen";
-"ukrainian_communities" = "Ukrainska sällskap i Sverige";
-"phonenumbers" = "Telefonnummer";
+"welcome" = "Вітаємо";
+"ukrainian_communities" = "Українська спільнота у Швеції";
+"phonenumbers" = "Контакти екстрених служб у Швеції";
 
 // Topics
-"general" = "Allmänt";
-"jobs" = "Jobb";
-"language" = "Språk";
-"housing" = "Boende";
-"healthcare" = "Sjukvård";
-"parents" = "Föräldrar";
+"general" = "Загальне";
+"jobs" = "Робота";
+"language" = "Мова";
+"housing" = "Житло";
+"healthcare" = "Медичні послуги";
+"parents" = "Батькам";
 
 // Topics for Swedes
-"donate" = "Donera";
-"housing_ukrainians" = "Boende för Ukrainare";
-"volunteer" = "Bli Volontär";
+"donate" = "Задонатити";
+"housing_ukrainians" = "Надати житло українцям";
+"volunteer" = "Допомогти Україні";
 
 // Settings
-"about" = "Om";
-"contact" = "Kontakt & Feedback";
-"privacy_policy" = "Integritetspolicy";
-"terms_and_condition" = "Villkor";
-"settings" = "Inställningar";
+"about" = "Про застосунок";
+"contact" = "Сконтактуйте з нами & надішліть відгук";
+"privacy_policy" = "Політика конфіденційності";
+"terms_and_condition" = "Правила та умови";
+"settings" = "Налаштування";
 
 // Phone numbers
-"emergency" = "I nöd - 112";
-"not_emergency" = "Polis, inte i nöd - 114 14";
-"medical" = "Hälsoråd - 1177";
+"emergency" = "В екстрених випадках - 112";
+"not_emergency" = "Поліція - 114 14";
+"medical" = "Медична консультація - 1177";
 
 // TabBar
-"for_ukrainians" = "För Ukrainare";
-"for_swedes" = "För Svenskar";
+"for_ukrainians" = "Для українців";
+"for_swedes" = "Для шведів";

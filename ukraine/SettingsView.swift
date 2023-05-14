@@ -35,7 +35,7 @@ struct SettingsView: View {
             }
         }
         .scrollContentBackground(.hidden)
-        .background(theme: .ukraine)
+        .background(theme: .ukraine)    
     }
 }
 

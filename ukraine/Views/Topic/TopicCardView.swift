@@ -24,7 +24,14 @@ struct TopicCardView: View {
             } else {
                 ZStack{
                     Image(topicViewModel.topic.imageUrl).resizable().frame(width: 150, height: 120).aspectRatio(contentMode: .fill).cornerRadius(10).opacity(0.8)
-                    Text(LocalizedStringKey(topicViewModel.topic.title)).font(.title).fontWeight(.bold).foregroundColor(.white).opacity(0.8)
+                    Text(LocalizedStringKey(topicViewModel.topic.title)).font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .opacity(0.8)
+                        .frame(width: 130)
+                        .padding()
+                        .minimumScaleFactor(0.5)
+                        
                 }
             }
 

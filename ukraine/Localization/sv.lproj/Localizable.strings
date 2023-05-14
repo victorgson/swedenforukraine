@@ -22,7 +22,7 @@
 // Topics for Swedes
 "donate" = "Donera";
 "housing_ukrainians" = "Boende för Ukrainare";
-"volunteer" = "Bli Volontär";
+"volunteer" = "Hjälp Ukraina";
 
 // Settings
 "about" = "Om";
@@ -33,7 +33,7 @@
 
 // Phone numbers
 "emergency" = "I nöd - 112";
-"not_emergency" = "Polis, inte i nöd - 114 14";
+"not_emergency" = "Polis - 114 14";
 "medical" = "Hälsoråd - 1177";
 
 // TabBar

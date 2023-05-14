@@ -22,7 +22,7 @@
 // Topics for Swedes
 "donate" = "Donate";
 "housing_ukrainians" = "Housing for Ukrainians";
-"volunteer" = "Volunteer";
+"volunteer" = "Help Ukraine";
 
 // Settings
 "about" = "About";
@@ -33,7 +33,7 @@
 
 // Phone numbers
 "emergency" = "In emergency - 112";
-"not_emergency" = "Police, no emergency - 114 14";
+"not_emergency" = "Police - 114 14";
 "medical" = "Medical advice - 1177";
 
 // TabBar

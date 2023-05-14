@@ -36,7 +36,7 @@ class EmergencyNumberRepository: FirestoreRepository {
     
     func get() -> AnyPublisher<[T], Error> {
         return Deferred {
-            return self.db.collection(paths.emergencyNumbers.rawValue).snapshotPublisher().map { snapshot in
+            return self.db.collection(Paths.emergencyNumbers.rawValue).getDocuments().map { snapshot in
                 snapshot.documents.compactMap { document in
                     return try? document.data(as: T.self)
                 }

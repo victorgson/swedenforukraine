@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  ukraine
+
+  Created by Victor Gustafsson on 2023-05-12.
+  
+*/
+
+// General
+"welcome" = "Вітаємо";
+"ukrainian_communities" = "Українська спільнота у Швеції";
+"phonenumbers" = "Контакти екстрених служб у Швеції";
+
+// Topics
+"general" = "Загальне";
+"jobs" = "Робота";
+"language" = "Мова";
+"housing" = "Житло";
+"healthcare" = "Медичні послуги";
+"parents" = "Батькам";
+
+// Topics for Swedes
+"donate" = "Задонатити";
+"housing_ukrainians" = "Надати житло українцям";
+"volunteer" = "Допомогти Україні";
+
+// Settings
+"about" = "Про застосунок";
+"contact" = "Сконтактуйте з нами & надішліть відгук";
+"privacy_policy" = "Політика конфіденційності";
+"terms_and_condition" = "Правила та умови";
+"settings" = "Налаштування";
+
+// Phone numbers
+"emergency" = "В екстрених випадках - 112";
+"not_emergency" = "Поліція - 114 14";
+"medical" = "Медична консультація - 1177";
+
+// TabBar
+"for_ukrainians" = "Для українців";
+"for_swedes" = "Для шведів";

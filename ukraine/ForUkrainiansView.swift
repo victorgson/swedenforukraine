@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ForUkrainiansView: View {
-    @State private var showingSheet = false
     var body: some View {
-            VStack {
-                ScrollView(showsIndicators: false) {
-                    TopicScrollView()
-                    CommunityScrollView()
-                    EmergencyListView()
-                }
-            }.background(theme: .ukraine)
+        VStack {
+            ScrollView(showsIndicators: false) {
+                TopicScrollView()
+                CommunityScrollView()
+                EmergencyListView()
+            }
+        }
     }
 }
 

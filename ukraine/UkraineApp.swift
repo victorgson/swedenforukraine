@@ -11,40 +11,36 @@ import FirebaseFirestore
 
 @main
 struct UkraineApp: App {
-    
+
     init() {
         FirebaseApp.configure()
     }
-    
+
     var body: some Scene {
         WindowGroup {
             TabView {
-                Group {
                     NavigationView {
-                        ForUkrainiansView().navigationBar(with: "Welcome👋🇺🇦!", icon: "gearshape.fill")
+                        ForUkrainiansView().background(theme: .ukraine).navigationBar(with: Localize.welcome.string, icon: "gearshape.fill")
                     }.tint(.white)
                         .tabItem {
                             Label {
-                                Text("For Ukrainians").font(.title).foregroundColor(.white)
+                                Text(Localize.for_ukrainians.string).font(.title).foregroundColor(.white)
                             } icon: {
                                 Image("UA-flag")
                                 
                             }
-                        }
-                }
-                Group {
+                        } 
                     NavigationView {
-                        ForSwedesView().background(theme: .ukraine).navigationBar(with: "Welcome👋🇸🇪!", icon: "gearshape.fill")
+                        ForSwedesView().background(theme: .ukraine).navigationBar(with: Localize.welcome.string, icon: "gearshape.fill")
                     }.tint(.white)
                         .tabItem {
                             Label {
-                                Text("For Swedes").font(.title).foregroundColor(.white)
+                                Text(Localize.for_swedes.string).font(.title).foregroundColor(.white)
                             } icon: {
                                 Image("SE-flag")
                             }
                             
                         }
-                }
             }.tabViewStyle(.automatic)
         }
     }

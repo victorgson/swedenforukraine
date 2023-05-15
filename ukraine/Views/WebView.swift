@@ -39,14 +39,11 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
     }
     
     func makeUIView(context: Context) -> WKWebView {
-        // Enable javascript in WKWebView
-        let preferences = WKPreferences()
-        preferences.javaScriptEnabled = true
-        
+        let preferences = WKWebpagePreferences()
+        preferences.allowsContentJavaScript = true
         let configuration = WKWebViewConfiguration()
-        // Here "iOSNative" is our delegate name that we pushed to the website that is being loaded
         configuration.userContentController.add(self.makeCoordinator(), name: "iOSNative")
-        configuration.preferences = preferences
+        configuration.defaultWebpagePreferences = preferences
         
         let webView = WKWebView(frame: CGRect.zero, configuration: configuration)
         webView.navigationDelegate = context.coordinator
@@ -60,16 +57,6 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
             switch self.urlType {
             case .website:
                 webView.load(URLRequest(url: url))
-                //            case .facebook:
-                //                let url = URL(string: "fb://profile/682101599891991")!
-                //                      let application = UIApplication.shared
-                //                      // Check if the facebook App is installed
-                //                      if application.canOpenURL(url) {
-                //                          application.open(url)
-                //                      } else {
-                //                          // If Facebook App is not installed, open Safari with Facebook Link
-                //                          application.open(url)
-                //                      }
             default:
                 webView.load(URLRequest(url: url))
             }

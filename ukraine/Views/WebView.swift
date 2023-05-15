@@ -85,9 +85,6 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
         init(_ uiWebView: WebView) {
             self.parent = uiWebView
             self.delegate = parent
-            
-            let window = UIApplication.shared.currentUIWindow()
-            
         }
         
         deinit {

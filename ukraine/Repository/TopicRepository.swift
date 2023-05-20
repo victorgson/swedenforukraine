@@ -19,9 +19,9 @@ class TopicRepository: ObservableObject, FirestoreRepository {
     
     typealias T = TopicModel
     
-    internal var cancellables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     
-    internal var db: Firestore {
+    var db: Firestore {
         return Firestore.firestore()
     }
     

@@ -29,8 +29,8 @@ struct CommunityCardView: View {
     }
 }
 
-//struct CommunityCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CommunityCardView()
-//    }
-//}
+struct CommunityCardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CommunityCardView(communityViewModel: CommunityViewModel(community: MockData().community))
+    }
+}

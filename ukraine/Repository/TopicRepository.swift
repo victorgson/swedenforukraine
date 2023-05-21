@@ -40,15 +40,8 @@ class TopicRepository: ObservableObject, FirestoreRepository {
         }.store(in: &cancellables)
     }
     
-    enum APIError: LocalizedError {
-        /// Invalid request, e.g. invalid URL
-        case invalidRequestError(String)
-    }
-    
     func get() -> AnyPublisher<[TopicModel], Error> {
-        
         return Deferred {
-            
             return self.db.collection(Paths.topics.rawValue)
                 .getDocuments()
                 .tryMap { snapshot in
@@ -56,8 +49,6 @@ class TopicRepository: ObservableObject, FirestoreRepository {
                         try document.data(as: T.self)
                     }
                 }
-            
-            
         }.eraseToAnyPublisher()
     }
 }

@@ -22,6 +22,7 @@ class CommunitiesRepository: FirestoreRepository {
         get().sink { completion in
             switch completion {
             case .finished:
+          
                 break
             case .failure(let err):
                 assertionFailure(err.localizedDescription)

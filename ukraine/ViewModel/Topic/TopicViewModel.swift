@@ -5,10 +5,6 @@
 //  Created by Victor Gustafsson on 2023-04-13.
 //
 
-import Foundation
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseFirestoreSwift
 import Combine
 class TopicViewModel: ObservableObject, Identifiable {
     

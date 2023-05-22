@@ -307,6 +307,7 @@
 				6AC7A36529DEE536003F8E18 /* Assets.xcassets */,
 				6AF52E8329DF1F0D00D49FC5 /* Info.plist */,
 				6AE8DA1929E747B9009054B6 /* GoogleService-Info.plist */,
+				E9F678DC2A191C0400BB6E76 /* MockData.swift */,
 			);
 			path = ukraine;
 			sourceTree = "<group>";
@@ -315,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				6AC7A36829DEE536003F8E18 /* Preview Assets.xcassets */,
-				E9F678DC2A191C0400BB6E76 /* MockData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ukraine/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "For Ukraine - Help in Sweden";
+				INFOPLIST_KEY_CFBundleDisplayName = "For Ukraine";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -774,7 +774,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ukraine/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "For Ukraine - Help in Sweden";
+				INFOPLIST_KEY_CFBundleDisplayName = "For Ukraine";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

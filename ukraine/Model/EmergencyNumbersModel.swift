@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct EmergencyNumbersModel: Codable, Identifiable {
     var id: Int
     var title: String

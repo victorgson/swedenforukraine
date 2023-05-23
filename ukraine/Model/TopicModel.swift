@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-
 struct TopicModel: Codable, Identifiable {
     var id: Int
     var title: String

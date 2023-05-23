@@ -10,7 +10,12 @@ import SwiftUI
 struct TopicCardView: View {
     
     @ObservedObject var topicViewModel: TopicViewModel
-    var isWide: Bool = false
+    private var isWide: Bool
+    
+    init(topicViewModel: TopicViewModel, isWide: Bool = false) {
+        self.topicViewModel = topicViewModel
+        self.isWide = isWide
+    }
     var body: some View {
         NavigationLink(destination: TopicDetailView(topic: topicViewModel.topic.subTopics)) {
             if isWide {

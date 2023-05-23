@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
     
-// TODO: FIX
+    //TODO: Extract to viewModel
     let text: String = """
  For Ukraine is authored by Victor Gustafsson as a final project at IT-Högskolan in Gothenburg. The app wouldn't been possible without help from Yuliia Kyzyk.
  

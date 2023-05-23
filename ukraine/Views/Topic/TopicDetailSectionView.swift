@@ -14,7 +14,7 @@ struct TopicDetailSectionView: View {
     var body: some View {
         Section(topic.title) {
             VStack {
-                
+                // TODO: Create a single modifier instead of having nested modifiers
                 if let imageUrl = topic.imageUrl {
                     AsyncImage(url: URL(string: imageUrl), content: { image in
                         image.resizable()

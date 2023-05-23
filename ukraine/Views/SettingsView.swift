@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    //TODO: Extract to viewModel
     @Environment(\.openURL) private  var openURL
     let url = URL(string: "https://www.apple.com")
     let email = URL(string: "message://")

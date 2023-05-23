@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct CommunityModel: Codable, Identifiable {
     var id: Int
     var title: String

@@ -30,6 +30,7 @@ enum Localize: String {
     case donate
     case housing_ukrainians
     case volunteer
+    case about_text
 }
 
 extension Localize {

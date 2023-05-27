@@ -7,10 +7,14 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class TopicListViewModel: ObservableObject {
     private let topicRepository = TopicRepository()
-
+    
+    let items = [GridItem(.fixed(120), spacing: 16), GridItem(.fixed(120), spacing: 16)]
+    
+    
     private var cancellables: Set<AnyCancellable> = []
     @Published var topicViewModels: [TopicViewModel] = []
     

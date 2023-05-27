@@ -9,14 +9,11 @@ import SwiftUI
 
 struct TopicScrollView: View {
     
-    
-    // Move to VM?
-    var items = [GridItem(.fixed(120), spacing: 16), GridItem(.fixed(120), spacing: 16)]
     @ObservedObject var topicListViewModel = TopicListViewModel()
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHGrid(rows: items, alignment: .center) {
+            LazyHGrid(rows: topicListViewModel.items, alignment: .center) {
                 ForEach(topicListViewModel.topicViewModels) { topicViewModel in
                     TopicCardView(topicViewModel: topicViewModel)
                 }

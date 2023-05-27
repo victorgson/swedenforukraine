@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-    //TODO: Extract to viewModel
-    @Environment(\.openURL) private  var openURL
-    let url = URL(string: "https://www.apple.com")
-    let email = URL(string: "message://")
-    
+    @Environment(\.openURL) private var openURL
     var body: some View {
         ZStack {
             List {
@@ -23,15 +18,11 @@ struct SettingsView: View {
                     }
                     Text(Localize.contact.string)
                         .onTapGesture {
-                            openURL(URL(string: "mailto:victorgson@icloud.com")!)
+                            openURL(AppConstants.emailTo)
                         }
                     Text(Localize.privacy_policy.string)
                         .onTapGesture {
-                            openURL(url!)
-                        }
-                    Text(Localize.terms_and_condition.string)
-                        .onTapGesture {
-                            openURL(url!)
+                            openURL(AppConstants.privacyPolicyURL)
                         }
                 }
             }

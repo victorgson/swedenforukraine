@@ -6,6 +6,8 @@
 //
 
 import XCTest
+@testable import ukraine
+
 final class ukraineTests: XCTestCase {
 
 
@@ -19,5 +21,4 @@ final class ukraineTests: XCTestCase {
           // Then
           XCTAssertEqual(viewModel.id, topic.id)
       }
-    
 }
